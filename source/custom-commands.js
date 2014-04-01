@@ -370,7 +370,7 @@ var customCommands = {
 		user.money = money;
 		var price = 0;
 		if (target === 'symbol') {
-			price = 5;
+			price = 1500;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a custom symbol. You will have this until you log off for more than an hour.');
@@ -383,7 +383,7 @@ var customCommands = {
 			}
 		}
 		if (target === 'fix') {
-			price = 10;
+			price = 5000;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a fix for a custom avatar or trainer card. Private Message an admin to alter it for you.');
@@ -394,7 +394,7 @@ var customCommands = {
 			}
 		}
 		if (target === 'poof') {
-			price = 15;
+			price = 1500;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a the ability to add a custom poof. Private Message an admin to add it in.');
@@ -405,7 +405,7 @@ var customCommands = {
 			}
 		}
 		if (target === 'custom') {
-			price = 20;
+			price = 10000;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased an Custom Avatar. Private Message an admin add it in.');
@@ -416,7 +416,7 @@ var customCommands = {
 			}
 		}
 		if (target === 'animated') {
-			price = 25;
+			price = 25000;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased an Animated Avatar. Private Message an admin add it in.');
@@ -427,10 +427,10 @@ var customCommands = {
 			}
 		}
 		if (target === 'trainer') {
-			price = 30;
+			price = 30000;
 			if (price <= user.money) {
 				user.money = user.money - price;
-				this.sendReply('You have purchased a trainer card. You need to message an admin capable of adding this.');
+				this.sendReply('You have purchased a trainer card. You need to message an admin capable of adding this. You must write your own in HTML.');
 				this.add(user.name + ' has purchased a trainer card.');
 				fs.appendFile('logs/transactions.log','\n'+Date()+': '+user.name+' has bought a ' + target + ' for ' + price + ' bucks. ' + user.name + ' now has ' + user.money + ' bucks' + '.');
 			} else {
@@ -438,7 +438,7 @@ var customCommands = {
 			}
 		}
 		if (target === 'room') {
-			price = 50;
+			price = 50000;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a room. Private Message an admin to make the room.');
@@ -449,7 +449,7 @@ var customCommands = {
 			}
 		}
 		if (target === 'voice') {
-			price = 100;
+			price = 10000;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a promotion to global voice. Private Message an admin to promote you.');
@@ -463,7 +463,7 @@ var customCommands = {
 			price = 250;
 			if (price <= user.money) {
 				user.money = user.money - price;
-				this.sendReply('You have purchased a promotion to global player. Private Message an admin to promote you.');
+				this.sendReply('You have purchased a promotion to global player. Private Message an admin to promote you. Does nothing currently.');
 				this.add(user.name + ' has purchased a promotion to player.');
 				fs.appendFile('logs/transactions.log','\n'+Date()+': '+user.name+' has bought a ' + target + ' for ' + price + ' PokeDollars. ' + user.name + ' now has ' + user.money + ' PokeDollars' + '.');
 			} else {
