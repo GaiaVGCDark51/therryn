@@ -1,10 +1,10 @@
 // The server port - the port to run Pokemon Showdown under
-exports.port = 8000;
+exports.port = 6000;
 
 // The server id - the id specified in the server registration.
 //   This should be set properly especially when there are more than one
 //   pokemon showdown server running from the same IP
-exports.serverId = 'killthenoise';
+exports.serverId = 'pokemontherryn';
 
 // proxyIps - proxy IPs with trusted X-Forwarded-For headers
 //   This can be either false (meaning not to trust any proxies) or an array
@@ -139,29 +139,7 @@ exports.herokuHack = false;
 // displayed in the client.
 exports.customAvatars = {
 	//'userid': 'customavatar.png'
-	'blakjack': 'blakjack.png',
-	'creaturephil': 'birkal.gif',
-	'10messi': '10messi.gif',
-	'achampaero': 'achampaero.gif',
-	'creatoraero': 'achampaero.gif',
-	'aeliteaknolan': 'aknolan.jpg',
-	'arjunb': 'arjunb.gif',
-	'ionstine': 'astre.png',
-	'avada': 'avada.gif',
-	'boo118': 'boo118.gif',
-	'whymegaluke': 'boo118.gif',
-	'calvinz': 'calvinz.png',
-	'champinnyxe': 'championonyxe.png',
-	'championcorper': 'championcorper.gif',
-	'e4arsh': 'e4arsh.gif',
-	'jackdaw': 'jackdaw.gif',
-	'ncrypt': 'ncrypt.gif',
-	'championphoton': 'photon.gif',
-	'skarr': 'skarr.gif',
-	'sooperpooper': 'sooperpooper.gif',
-	'unovachampionn': 'ucn.gif',
-	'soraypusef': 'yousef.gif',
-	'zarif': 'zarif.png',
+	
 };
 
 // appealUri - specify a URI containing information on how users can appeal
