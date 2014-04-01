@@ -1159,6 +1159,23 @@ var commands = exports.commands = {
 			process.exit();
 		}, 10000);
 	},
+	
+	restart: function(target, room, user) {
+                if (!this.can('lockdown')) return false;
+
+                if (!Rooms.global.lockdown) {
+                        return this.sendReply('For safety reasons, /restart can only be used during lockdown.');
+                }
+
+                if (CommandParser.updateServerLock) {
+                        return this.sendReply('Wait for /updateserver to finish before using /kill.');
+                }
+                this.logModCommand(user.name + ' used /restart');
+                var exec = require('child_process').exec;
+                exec('./restart.sh');
+                Rooms.global.send('|refresh|');
+        },
+
 
 	loadbanlist: function(target, room, user, connection) {
 		if (!this.can('hotpatch')) return false;
