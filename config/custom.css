@@ -1,9 +1,9 @@
-     body {
+body {
          
         color: white;
         font-size: 11pt;
         font-family: Verdana,Helvetica,Arial,sans-serif;
-        background-image:url('http://pasteboard.co/2hG99vxo.png');
+        background-image:url('http://pasteboard.s3.amazonaws.com/images/2hG99vxo.png');
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
